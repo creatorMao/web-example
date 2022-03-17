@@ -1,0 +1,16 @@
+{
+  "id": "3245995",
+  "name": "测试项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "27804858",
+      "name": "存储",
+      "font_class": "cunchu",
+      "unicode": "100ab",
+      "unicode_decimal": 65707
+    }
+  ]
+}
