@@ -74,7 +74,9 @@
             transition: all 2s;
         }
 
-        .img:hover{
+        .img1:hover,
+        .img2:hover
+        {
             transform: rotate(360deg);
         }
 
@@ -84,6 +86,35 @@
 
         .box4:hover .img3{
             transform: translate(200px) rotate(360deg);
+        }
+
+        .box5 img{
+            width: 100%;
+        }
+
+        .box5:hover img{
+            transform: scale(-1.2);
+        }
+
+        .box6::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-left: -25px;
+            margin-top: -25px;
+            background-color: red;
+            opacity: 0;
+            transform: scale(10);
+            transition: all 0.2s;
+        }
+
+        .box6:hover::after{
+            opacity: 1;
+            transform: scale(1);
         }
     </style>
 </head>
@@ -109,15 +140,25 @@
     </div>
 
     <h2>旋转</h2>
-    <img class="img img1" src="https://i0.hdslb.com/bfs/face/ac3601cb05f140588ae212c5bf448c9dd3945dc3.jpg@96w_96h_1c_1s.webp" alt="">
+    <img class="img img1" src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
 
     <h2>旋转-改变旋转中心点(右下)</h2>
-    <img class="img img2" src="https://i0.hdslb.com/bfs/face/ac3601cb05f140588ae212c5bf448c9dd3945dc3.jpg@96w_96h_1c_1s.webp" alt="">
+    <img class="img img2" src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
     
     <h3>多重转换（位移+旋转）</h3>
     <div class="box box4">
-        <img class="img img3" src="https://i0.hdslb.com/bfs/face/ac3601cb05f140588ae212c5bf448c9dd3945dc3.jpg@96w_96h_1c_1s.webp" alt="">
+        <img class="img img3" src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
     </div>
+
+    <h2>缩放</h2>
     
+    <div class="box box5">
+        <img class="img" src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="">
+    </div>
+
+    <h3>播放按钮</h3>
+    <div class="box box6">
+
+    </div>
 </body>
 </html>
