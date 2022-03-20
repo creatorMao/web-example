@@ -13,7 +13,9 @@
             overflow: hidden;
             /* background-color: red; */
         }
+        .box a,
         .box img{
+            display: block;
             width: 100%;
             height: 100%;
             transition: all 0.5s;
@@ -34,7 +36,7 @@
             transition: all 0.5s;
         }
 
-        .box:hover::after{
+        .box:hover a::after{
             opacity: 1;
         }
 
@@ -63,7 +65,9 @@
 <body>
     <h2>渐变遮罩</h2>
     <div class="box">
-        <img src="./images/6g.jpg" alt=""/>
+        <a href="">
+            <img src="./images/6g.jpg" alt=""/>
+        </a>
     </div>
 
     <h2>华为商城效果</h2>
