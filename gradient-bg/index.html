@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            /* background-color: red; */
+        }
+        .box img{
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s;
+        }
+
+        .box a::after{
+            content: '';
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.6)
+            );
+            opacity: 0;
+            transition: all 0.5s;
+        }
+
+        .box:hover::after{
+            opacity: 1;
+        }
+
+        .box:hover .title{
+            bottom: 0px;
+        }
+
+        .box:hover img{
+            transform: scale(1.1);
+        }
+
+        .box .title{
+            position: absolute;
+            z-index: 2;
+            left: 0px;
+            bottom: -50px;
+            color: white;
+            transition: all 0.5s;
+        }
+
+        .box .title{
+            padding-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>渐变遮罩</h2>
+    <div class="box">
+        <img src="./images/6g.jpg" alt=""/>
+    </div>
+
+    <h2>华为商城效果</h2>
+    <div class="box">
+        <a href="">
+            <img src="./images/6g.jpg" alt="">
+            <div class="title">
+                <p>前言探索</p>
+                <p>憧憬6G，共同定义6G</p>
+                <p>查看更多</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
