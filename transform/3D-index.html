@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            transition: transform 0.2s;
+        }
+        .box1:hover{
+            transform: translate3d(100px,200px,200px);
+            /* transform: translateX(); */
+            /* transform: translateY(); */
+        }
+
+        .box5{
+            perspective: 1000px;
+        }
+        .box2:hover{
+            transform: translate3d(0px,0px,-200px);
+        }
+    </style>
 </head>
 <body>
     <h1>空间(3D)转换</h1>
+    <h2>位移</h2>
+    <div class="box box1">
+
+    </div>
+    <h2>透视</h2>
+    <div class="box5">
+        <div class="box box2">
+        </div>
+    </div>
 </body>
 </html>
