@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .box10,
         .box{
+            position: relative;
             width: 200px;
             height: 200px;
             border: 1px solid red;
@@ -19,22 +21,94 @@
         }
 
         .box5{
-            perspective: 1000px;
+            width: 400px;
+            height: 400px;
+            perspective: 800px;
+        }
+        .box5 .box{
+            margin: 0 auto;
+            margin-top: 100px;
         }
         .box2:hover{
+            /* transform: translate3d(0px,0px,200px); */
             transform: translate3d(0px,0px,-200px);
+        }
+
+        .box6:hover{
+            transform: rotateZ(360deg);
+        }
+
+        .box7:hover{
+            transform: rotateX(60deg);
+        }
+
+        .box8:hover{
+            transform: rotateY(60deg);
+        }
+
+        .box9{
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+
+        .box9::after,
+        .box9::before{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            content: '';
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .box9::before{
+            background-color: green;
+            transform: translateZ(200px);
+        }
+
+        .box9::after{
+            background-color: red;
+        }
+
+        .box10:hover .box9{
+            transform: rotateY(180deg);
         }
     </style>
 </head>
 <body>
     <h1>空间(3D)转换</h1>
+    
     <h2>位移</h2>
     <div class="box box1">
 
     </div>
+    
     <h2>透视</h2>
-    <div class="box5">
+    <div class="box box5">
         <div class="box box2">
+        </div>
+    </div>
+    
+    <h2>旋转rotateZ(360deg)</h2>
+    <div class="box box6">
+
+    </div>
+
+    <h2>旋转rotateX(60deg)</h2>
+    <div class="box box7">
+
+    </div>
+
+    <h2>旋转rotateY(60deg)</h2>
+    <div class="box box8">
+
+    </div>
+
+    <h2>立体盒子(只花了两面：前与后)</h2>
+    <div class="box10">
+        <div class="box box9">
+
         </div>
     </div>
 </body>
