@@ -10,10 +10,9 @@
             width: 200px;
             height: 200px;
             background-color: red;
-            animation: change-large 2s;
         }
 
-        @keyframes change-large {
+        @keyframes change-large-box1 {
             from {
                 width: 200px;
             }
@@ -21,12 +20,64 @@
                 width: 600px;
             }
         }
+
+        .box1{
+            animation: change-large-box1 2s;
+        }
+
+
+        @keyframes change-large-box2 {
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 600px;
+            }
+            100%{
+                width: 400px;
+            }
+        }
+
+        .box2{
+            animation: change-large-box2 2s;
+        }
+
+
+        @keyframes change-large-box3 {
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 600px;
+            }
+            100%{
+                width: 700px;
+            }
+        }
+        .box3{
+            animation: change-large-box3 2s 1s 2 forwards;
+        }
+
+        .box4{
+            animation: change-large-box3 2s 2 forwards alternate;
+        }
+
     </style>
 </head>
 <body>
-    <h2>让一个盒子，宽度变大(两个状态间变化)</h2>
-    <div class="box">
+    <h2>让一个盒子，在两秒内，宽度变大，只有两个状态</h2>
+    <div class="box box1">
+    </div>
 
+    <h2>让一个盒子，宽度在2s中内，变化两次，先变最大，再变小一点，最后还原</h2>
+    <div class="box box2">
+    </div>
+    <h2>延迟1s、重复2次、停在最后一帧</h2>
+    <div class="box box3">
+    </div>
+
+    <h2>让返回来也有动画</h2>
+    <div class="box box4">
     </div>
 </body>
 </html>
