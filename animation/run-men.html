@@ -14,7 +14,7 @@
         }
 
         .people1{
-            animation: move 2s;
+            animation: move 2s infinite;
         }
         @keyframes move {
             from {
@@ -30,6 +30,30 @@
             animation-timing-function: steps(12);
             animation-iteration-count: infinite;
         }
+
+        @keyframes run {
+            0% {
+                transform:translateX(0);
+            }
+            10% {
+                transform:translateX(50px);
+            }
+            30% {
+                transform:translateX(100px);
+            }
+            90% {
+                transform:translateX(300px);
+            }
+            100%{
+                transform:translateX(400px);
+            }
+        }
+
+        .peopel3{
+            border: none;
+            animation: run 1s forwards,
+                       move 1s steps(12) infinite;
+        }
     </style>
 </head>
 <body>
@@ -39,6 +63,10 @@
     </div>
     <h2>逐帧动画</h2>
     <div class="people people2">
+
+    </div>
+    <h2>跑远</h2>
+    <div class="people peopel3">
 
     </div>
 </body>
