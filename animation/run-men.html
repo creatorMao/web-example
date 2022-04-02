@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .people{
+            width: 140px;
+            height: 140px;
+            background:url(./images/bg.png);
+            border: 1px solid black;
+        }
+
+        .people1{
+            animation: move 2s;
+        }
+        @keyframes move {
+            from {
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1680px 0px;
+            }
+        }
+
+        .people2{
+            animation: move 1s;
+            animation-timing-function: steps(12);
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <h2>补间动画,在精灵图场景下，会有缺点</h2>
+    <div class="people people1">
+
+    </div>
+    <h2>逐帧动画</h2>
+    <div class="people people2">
+
+    </div>
+</body>
+</html>
