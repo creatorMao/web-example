@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全民出游</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+
+        html,
+        body{
+            height: 100%;
+        }
+
+        body{
+            background:url(./images/f1_1.jpg) no-repeat center;
+            background-size: cover;
+        }
+
+        .imgs img{
+            position:absolute;
+            left: 50%;
+            top: 0px;
+        }
+
+        .cloud img{
+            animation: icloud-move 2s infinite alternate linear
+        }
+
+        .cloud img:nth-child(1){
+            margin-left: -200px;   
+            top:20px;
+        }
+
+        .cloud img:nth-child(2){
+            margin-left: -448px;   
+            top: 169px;
+            animation-delay: 0.6s;
+        }
+
+        .cloud img:nth-child(3){
+            margin-left: 200px;   
+            top: 50px;
+            animation-delay: 0.9s;
+        }
+
+        @keyframes icloud-move {
+            to{
+                transform: translateX(20px);
+            }
+        }
+
+        .san img:nth-child(1){
+            margin-left: -347px;
+            top: 153px;
+            animation: san-move 1.5s infinite alternate linear;
+        }
+
+        @keyframes san-move {
+            to{
+                transform: translateY(-25px);
+            }
+        }
+
+
+        .step img{
+            position:absolute;
+            bottom: 60px;
+            left: 50%;
+            animation: step-move 1s infinite alternate;
+        }
+
+        .step img:nth-child(1){
+            margin-left: -354px;
+        }
+
+        .step img:nth-child(2){
+            margin-left: -180px;
+            animation-delay: 0.5s;
+        }
+
+        .step img:nth-child(3){
+            margin-left: 0px;
+            animation-delay: 0.7s;
+        }
+
+        .step img:nth-child(4){
+            margin-left: 180px;
+            animation-delay: 0.9s;
+        }
+
+        @keyframes step-move {
+            to{
+                transform: translateY(-30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cloud imgs">
+        <img src="./images/yun1.png" alt="">
+        <img src="./images/yun2.png" alt="">
+        <img src="./images/yun3.png" alt="">
+    </div>
+
+    <div class="san imgs">
+        <img src="./images/san.png" alt="">
+    </div>
+
+    <div class="step">
+        <img src="./images/1.png" alt="">
+        <img src="./images/2.png" alt="">
+        <img src="./images/3.png" alt="">
+        <img src="./images/4.png" alt="">
+    </div>
+</body>
+</html>
