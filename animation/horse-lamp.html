@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑马灯效果</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: red;
+        }
+
+        .box ul{
+            width: 1800px;
+            margin: 0;
+            padding: 0;
+            animation: move 5s infinite;
+            animation-timing-function:linear;
+        }
+
+        .box ul li{
+            float: left;
+            list-style: none;
+        }
+
+        .box img{
+            width: 200px;
+            height: 200px;
+        }
+
+        .box:hover ul{
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            to{
+                transform: translateX(-1200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="./images/1.jpeg" alt=""></li>
+            <li><img src="./images/2.jpeg" alt=""></li>
+            <li><img src="./images/3.jpeg" alt=""></li>
+            <li><img src="./images/4.jpeg" alt=""></li>
+            <li><img src="./images/5.jpeg" alt=""></li>
+            <li><img src="./images/6.jpeg" alt=""></li>
+
+            <li><img src="./images/1.jpeg" alt=""></li>
+            <li><img src="./images/2.jpeg" alt=""></li>
+            <li><img src="./images/3.jpeg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
