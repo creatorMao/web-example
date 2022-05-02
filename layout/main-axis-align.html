@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主轴对齐方式</title>
+    <style>
+        .box {
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .box .son {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+
+        .box1 {
+            /* 默认，可不写 */
+        }
+
+        .box2 {
+            justify-content: flex-end;
+        }
+
+        .box3 {
+            justify-content: center;
+        }
+
+        .box4 {
+            justify-content:space-evenly;
+        }
+
+        .box5 {
+            justify-content:space-around;
+        }
+
+        .box6 {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>justify-content:flex-start 默认</h2>
+    <div class="box box1">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <h2>justify-content:flex-end</h2>
+    <div class="box box2">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <h2>justify-content:lex-center 居中</h2>
+    <div class="box box3">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <h2>justify-content:space-evenly 均匀分布</h2>
+    <div class="box box4">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <h2>justify-content:space-around 在弹性盒子四周有间隔</h2>
+    <div class="box box5">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+    <h2>justify-content:flex-between 在两个弹性盒子之间有间隔</h2>
+    <div class="box box6">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+</body>
+</html>
