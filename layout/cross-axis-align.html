@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧轴对齐方式</title>
+    <style>
+          .box {
+            display: flex;
+            height: 200px;
+            border: 1px solid black;
+            justify-content: space-evenly;
+        }
+
+        .box .son {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        .box1 .son{
+            height: initial;
+        }
+        .box1{
+            align-items: stretch;
+        }
+
+        .box2{
+            align-items: stretch;
+        }
+
+        .box3{
+            align-items: center;
+        }
+
+        .box4{
+            align-items: flex-start;
+        }
+
+        .box5{
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h2>align-items: stretch; 默认，代表拉伸，拉伸的前提是子元素没有高度</h2>
+    <div class="box box1">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+
+    <h2>align-items: stretch; 默认，子元素有高度时，无法拉伸,效果上与flex-start相同</h2>
+    <div class="box box2">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+
+    <h2>align-items: center; 居中</h2>
+    <div class="box box3">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+
+    <h2>align-items: flex-start; </h2>
+    <div class="box box4">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+
+    <h2>align-items: flex-end; </h2>
+    <div class="box box5">
+        <div class="son"></div>
+        <div class="son"></div>
+        <div class="son"></div>
+    </div>
+</body>
+</html>
