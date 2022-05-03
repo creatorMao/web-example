@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩比</title>
+    <style>
+        .box{
+            display: flex;
+            height: 150px;
+            border: 1px solid black;
+        }
+
+        .box .son{
+            height: 100px;
+            margin: 10px;
+            background-color: green;
+        }
+
+        .box .son:nth-child(1){
+            width: 100px;
+        }
+
+        .box1 .son:nth-child(2){
+            flex: 1;
+        }
+
+        .box2 .son:nth-child(2),
+        .box2 .son:nth-child(3){
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h2>第一个元素，固定宽度100px，第二个元素，占剩余尺寸，第三个元素：不设置</h2>
+    <div class="box box1">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+    </div>
+
+    <h2>第一个元素，固定宽度100px，第二个元素，占剩余尺寸1份，第三个元素，也是一份</h2>
+    <div class="box box2">
+        <div class="son">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div>
+    </div>
+</body>
+</html>
