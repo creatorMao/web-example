@@ -1,5 +1,6 @@
 body{
     background-color: #f7f7f8;
+    color: #333333;
 }
 
 /* 公共样式 */
@@ -8,6 +9,12 @@ body{
 }
 .red{
     color: #cf4444;
+}
+.pannel{
+    min-height: 50px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px; 
 }
 /* 公共样式 */
 
@@ -19,6 +26,76 @@ body{
     /* background-color: gray; */
     overflow: auto;
 }
+
+.user-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px 15px 11px;
+}
+
+/* 位置 */
+.user-info .location{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.user-info .location a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #68bda5;
+}
+
+.user-info .icon-location{
+    font-size: 28px;
+}
+
+/* 位置 */
+
+/* 地址 */
+.user-info .address{
+    flex: 1;
+    font-size: 13px;
+}
+.user-info .address .top{
+    margin-bottom: 5px;
+}
+.user-info .address .top .name{
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+.user-info .address .bottom{
+    font-size: 12px;
+}
+/* 地址 */
+
+/* 更多按钮 */
+.user-info .more{
+    width: 44px;
+    height: 44px;
+    /* border: 1px solid #eee; */
+    text-align: center;
+    line-height: 44px;
+}
+.user-info a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #68bda5;
+}
+
+.user-info .icon-more{
+    font-size: 16px;
+}
+
+
+/* 更多按钮 */
+
 /* 主体部分 */
 
 /* 支付部分 */
