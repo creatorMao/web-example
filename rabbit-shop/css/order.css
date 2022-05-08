@@ -16,6 +16,11 @@ body{
     background-color: #fff;
     border-radius: 5px; 
 }
+
+.price-icon::before{
+    content: "¥";
+    font-size: 9px;
+}
 /* 公共样式 */
 
 
@@ -26,6 +31,9 @@ body{
     /* background-color: gray; */
     overflow: auto;
 }
+
+
+/* 用户信息 */
 
 .user-info{
     display: flex;
@@ -92,9 +100,70 @@ body{
 .user-info .icon-more{
     font-size: 16px;
 }
-
-
 /* 更多按钮 */
+
+/* 用户信息 */
+
+/* 商品信息 */
+
+.main .goods{
+    display: flex;
+    padding: 11px 0px 11px 11px;
+}
+
+.main .goods .pic{
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+}
+
+.main .goods .info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main .goods .info .title{
+    font-size: 13px;
+    line-height: 19px;
+    color: #262626;
+}
+
+.main .goods .info .tag-container span{
+    margin-right: 5px;
+    padding: 4px;
+    font-size: 11px;
+    border-radius: 2px;
+    color: #888888;
+    background-color: #f7f7f8;
+}
+
+.main .goods .info .tag-container span:last-child{
+    margin-right: 0px;
+}
+
+.price>span{
+    margin-right: 12px;
+}
+
+.price .price-now{
+    font-size: 16px;
+}
+
+.price .price-last{
+    font-size: 12px;
+    color: #999999;
+}
+
+.main .goods .count{
+    min-width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 15px;
+}
+/* 商品信息 */
 
 /* 主体部分 */
 
