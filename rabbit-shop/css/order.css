@@ -3,7 +3,7 @@ body{
     color: #333333;
 }
 
-/* 公共样式 */
+/* #region  公共样式*/
 .block{
     background-color: white;
 }
@@ -25,10 +25,9 @@ body{
 .space-between{
     justify-content: space-between;
 }
-/* 公共样式 */
+/* #endregion 公共样式 */
 
-
-/* 主体部分 */
+/* #region 主体部分 */
 .main{
     /* min-height: 1000px; */
     padding: 12px 12px 80px;
@@ -36,8 +35,7 @@ body{
     overflow: auto;
 }
 
-
-/* 用户信息 */
+/* #region 用户信息 */
 
 .user-info{
     display: flex;
@@ -106,9 +104,9 @@ body{
 }
 /* 更多按钮 */
 
-/* 用户信息 */
+/* #endregion 用户信息 */
 
-/* 商品信息 */
+/* #region 商品信息 */
 
 .main .goods{
     display: flex;
@@ -167,9 +165,9 @@ body{
     line-height: 44px;
     font-size: 15px;
 }
-/* 商品信息 */
+/* #endregion 商品信息 */
 
-/* 其他信息 */
+/* #region 其他信息 */
 .main .others{
     padding: 15px;
     font-size: 13px;
@@ -194,11 +192,11 @@ body{
     color: #939393;
 }
 
-/* 其他信息 */
+/* #endregion 其他信息 */
 
-/* 主体部分 */
+/* #endregion 主体部分 */
 
-/* 支付部分 */
+/* #region 支付部分 */
 .pay{
     position: fixed;
     left: 0px;
@@ -232,4 +230,4 @@ body{
     line-height: 35px;
     color: white;
 }
-/* 支付部分 */
+/* #endregion 支付部分 */
