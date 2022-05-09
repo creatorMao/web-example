@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子换行</title>
+    <style>
+        .box{
+            display: flex;
+            width: 300px;
+            height: 150px;
+            border: 1px solid #000;
+        }
+
+        .box>div{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+
+        .box1{
+            flex-wrap: wrap;
+        }
+
+        .box2{
+            align-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. 不设置flex-wrap,子元素数量很少时，宽度为设置的50px</h2>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h2>2. 不设置flex-wrap,子元素数量很多(宽度和超过父元素)，子元素的宽度将被压缩，设置的50px失效</h2>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <h2>3. 设置flex-wrap:wrap,子元素数量很多(宽度和超过父元素)，子元素将换行</h2>
+    <div class="box box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <h3>3.1 设置行对齐方式</h3>
+    <div class="box box1 box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
