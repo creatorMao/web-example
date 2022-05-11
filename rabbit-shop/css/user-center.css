@@ -1,0 +1,41 @@
+body {
+    background-color: #f6f6f6;
+}
+
+.top {
+    background-color: #fff;
+    height: 133px;
+}
+
+.bottom {
+    background-color: #fff;
+    height: 300px;
+}
+
+/* #region 个人中心 */
+.main {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 85px;
+}
+
+/* #region 左侧导航栏 */
+.main .aside {
+    width: 227px;
+    min-height: 500px;
+    margin-right: 18px;
+    background-color: pink;
+}
+
+.main .content {
+    flex: 1;
+    background-color: skyblue;
+}
+
+
+/* #endregion */
+
+/* #region 右侧内容 */
+/* #endregion */
+
+/* #endregion */
