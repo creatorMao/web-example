@@ -27,15 +27,61 @@ body {
     background-color: pink;
 }
 
-.main .content {
-    flex: 1;
-    background-color: skyblue;
-}
-
-
 /* #endregion */
 
 /* #region 右侧内容 */
+
+.main .content {
+    flex: 1;
+    /* background-color: skyblue; */
+}
+
+/* #region 账户预览 */
+.overview{
+    display: flex;
+    height: 132px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 20px 0px;
+    background-color: #fff;
+}
+
+.overview>div{
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.overview>div>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    color: #333333;
+}
+
+.overview>div>a>img{
+    width: 25px;
+    height: 22px;
+    margin-bottom: 15px;
+}
+
+.overview>div>a .address{
+    width: 19px;
+}
+
+.overview>div:nth-child(1){
+    border-right: 1px solid #f4f4f4;
+}
+
+.overview .coupons>a>span:first-child{
+    font-size: 25px;
+    color: #e05e30;
+    margin-bottom: 5px;
+}
+/* #endregion */
+
 /* #endregion */
 
 /* #endregion */
