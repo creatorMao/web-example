@@ -1,3 +1,4 @@
+/* #region  页面通用样式 */
 body {
     background-color: #f6f6f6;
 }
@@ -12,32 +13,61 @@ body {
     height: 300px;
 }
 
-/* #region 个人中心 */
 .main {
     display: flex;
     margin-top: 30px;
     margin-bottom: 85px;
 }
+/* #endregion */
 
-/* #region 左侧导航栏 */
+/* #region  左侧导航栏 */
 .main .aside {
     width: 227px;
     min-height: 500px;
     margin-right: 18px;
     background-color: pink;
 }
-
 /* #endregion */
 
-/* #region 右侧内容 */
+/* #region  右侧内容 */
 
+/* #region  右侧公共样式 */
 .main .content {
     flex: 1;
     /* background-color: skyblue; */
 }
 
-/* #region 账户预览 */
-.overview{
+.pannel {
+    padding: 0px 20px 28px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.pannel .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 10px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.pannel .title>h4{
+    font-size: 22px;
+    color: #333333;
+}
+
+.pannel .title>a  {
+    font-size: 16px;
+    color: #999999;
+}
+
+.pannel .content{
+    padding: 15px;
+}
+/* #endregion */
+
+/* #region  账户预览 */
+.overview {
     display: flex;
     height: 132px;
     box-sizing: border-box;
@@ -46,14 +76,14 @@ body {
     background-color: #fff;
 }
 
-.overview>div{
+.overview>div {
     flex: 1;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.overview>div>a{
+.overview>div>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,27 +91,35 @@ body {
     color: #333333;
 }
 
-.overview>div>a>img{
+.overview>div>a>img {
     width: 25px;
     height: 22px;
     margin-bottom: 15px;
 }
 
-.overview>div>a .address{
+.overview>div>a .address {
     width: 19px;
 }
 
-.overview>div:nth-child(1){
+.overview>div:nth-child(1) {
     border-right: 1px solid #f4f4f4;
 }
 
-.overview .coupons>a>span:first-child{
+.overview .coupons>a>span:first-child {
     font-size: 25px;
     color: #e05e30;
     margin-bottom: 5px;
 }
+
 /* #endregion */
 
+/* #region  我的订单*/
+/* #endregion */
+
+/* #region  收藏商品*/
+/* #endregion */
+
+/* #region  我的足迹*/
 /* #endregion */
 
 /* #endregion */
