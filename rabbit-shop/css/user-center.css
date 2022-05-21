@@ -18,6 +18,25 @@ body {
     margin-top: 30px;
     margin-bottom: 85px;
 }
+
+.flex-row{
+    display: flex;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipsis{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 /* #endregion */
 
 /* #region  左侧导航栏 */
@@ -53,6 +72,7 @@ body {
 
 .pannel .title>h4{
     font-size: 22px;
+    font-weight: 400;
     color: #333333;
 }
 
@@ -114,6 +134,76 @@ body {
 /* #endregion */
 
 /* #region  我的订单*/
+.orders .item{
+    display: flex;
+    height: 137px;
+    margin-bottom: 20px;
+    border: 1px solid #f4f4f4;
+}
+
+.actions{
+    width: 180px;
+}
+
+.actions a{
+    margin: 2px 0px;
+    color: black;
+}
+
+.actions a:nth-child(1){
+    display: block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color:#5eb69c;
+    font-size: 14px;
+    border-radius: 2px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.price{
+    width: 200px; 
+    border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+}
+
+.state{
+    width: 200px;
+    color: #e05e30;
+    font-size: 14px;
+}
+
+.googs-detail{
+    flex: 1;
+    width: 0;
+}
+
+.googs-info{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.googs-info .pic{
+    width: 107px;
+    height: 107px;
+    padding: 0px 12px;
+}
+
+.googs-detail p{
+    font-size: 16px;
+    color: #333333;
+}
+
+.googs-detail>div>span
+{
+    margin-right: 5px;
+    font-size: 14px;
+    color: #999999;
+}
+
 /* #endregion */
 
 /* #region  收藏商品*/
