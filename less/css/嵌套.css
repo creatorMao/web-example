@@ -1,0 +1,15 @@
+.father {
+  width: 100px;
+}
+.father .son {
+  width: 50px;
+}
+.father .son .second-son {
+  width: 25px;
+}
+.father .son .second-son::after {
+  content: "";
+}
+.father .son .second-son:hover {
+  color: red;
+}
