@@ -36,13 +36,34 @@ img {
         background-color: #fff;
 
         .pic {
+            position: relative;
             height: (160 / @rootSize);
+            .icon-shoucang1{
+                position: absolute;
+                top: (15 / @rootSize);
+                right: (15 / @rootSize);
+                color: white;
+                font-size: (26 / @rootSize);
+            }
+            .active{
+                position: absolute;
+                left: (10 / @rootSize);
+                top:(-4 / @rootSize);
+                width: (68 / @rootSize);
+                height:(29 / @rootSize);
+                background-image: url(../images/status_active.png);
+                background-size: contain;
+                color: white;
+                font-size:(12 / @rootSize);
+                text-align: center;
+                line-height:(25 / @rootSize);
+            }
         }
 
         .txt {
             display: flex;
             padding: (10 / @rootSize) (15 / @rootSize);
-            font-size: 15px;
+            font-size:(15 / @rootSize);
             color: #3C3C3C;
 
             .left {
