@@ -103,7 +103,27 @@ footer {
     position: fixed;
     left: 0px;
     bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: (50/@rootSize);
     background-color: #FECA49;
+    color: white;
+    font-size: (11 / @rootSize);
+
+    .iconfont{
+        font-size: (24 / @rootSize);
+    }
+
+    a{
+        text-align: center;
+        color: #D78B09;
+    }
+    .active{
+        color: white;
+    }
+    p{
+        margin-top: (2 / @rootSize);
+    }
 }
