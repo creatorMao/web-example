@@ -1,2 +1,85 @@
-/* as
-sd */
+@import './base.less';
+@import './normalize.less';
+@rootSize: 37.5rem;
+
+body {
+    background-color: #F0F0F0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+// 主体
+.main {
+    margin-bottom: (50 / @rootSize);
+
+    // bannger
+    .banner {
+        .item {
+            height: (150 / @rootSize);
+        }
+    }
+
+    //标题
+    .title {
+        height: (40 / @rootSize);
+        line-height: (40 / @rootSize);
+        padding-left: (15 / @rootSize);
+        font-size: (14 / @rootSize);
+        color: #3C3C3C;
+    }
+
+    //活动
+    .item {
+        background-color: #fff;
+
+        .pic {
+            height: (160 / @rootSize);
+        }
+
+        .txt {
+            display: flex;
+            padding: (10 / @rootSize) (15 / @rootSize);
+            font-size: 15px;
+            color: #3C3C3C;
+
+            .left {
+                flex: 1;
+                p{
+                    margin-bottom: (15 / @rootSize);
+                    line-height: (21 / @rootSize);
+                }
+                .info{
+                    display: flex;
+                    color: #B4B4B4;
+                    font-size: (11 / @rootSize);
+                    div{
+                        margin-right: (15 / @rootSize);
+                        .iconfont{
+                            margin-right: (2 / @rootSize);
+                            font-size: (11 / @rootSize);
+                        }
+                    }
+                }
+            }
+
+            .right {
+                width: (65 / @rootSize);
+                text-align: right;
+                color: #FE6249;
+            }
+        }
+    }
+}
+
+//导航
+footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: (50/@rootSize);
+    background-color: #FECA49;
+}
