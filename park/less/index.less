@@ -45,18 +45,21 @@ img {
                 color: white;
                 font-size: (26 / @rootSize);
             }
-            .active{
+            .state{
                 position: absolute;
                 left: (10 / @rootSize);
                 top:(-4 / @rootSize);
                 width: (68 / @rootSize);
                 height:(29 / @rootSize);
-                background-image: url(../images/status_active.png);
+                background-image: url(../images/status_default.png);
                 background-size: contain;
                 color: white;
                 font-size:(12 / @rootSize);
                 text-align: center;
                 line-height:(25 / @rootSize);
+            }
+            .active{
+                background-image: url(../images/status_active.png);
             }
         }
 

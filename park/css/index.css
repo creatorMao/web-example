@@ -465,18 +465,21 @@ img {
   color: white;
   font-size: 0.69333333rem;
 }
-.main .item .pic .active {
+.main .item .pic .state {
   position: absolute;
   left: 0.26666667rem;
   top: -0.10666667rem;
   width: 1.81333333rem;
   height: 0.77333333rem;
-  background-image: url(../images/status_active.png);
+  background-image: url(../images/status_default.png);
   background-size: contain;
   color: white;
   font-size: 0.32rem;
   text-align: center;
   line-height: 0.66666667rem;
+}
+.main .item .pic .active {
+  background-image: url(../images/status_active.png);
 }
 .main .item .txt {
   display: flex;
