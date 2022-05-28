@@ -53,7 +53,49 @@ header {
     }
 
     .menu {
+        justify-content: space-between;
         height: (40 / @vw);
-        background-color: yellow;
+        border-bottom: 1px solid #e8e8e8;
+        // background-color: yellow;
+        .tab {
+            justify-content: space-around;
+            flex: 1;
+            height: 100%;
+            div {
+                height: 100%;
+                line-height: (40 / @vw);
+                a {
+                    font-size: (14 / @vw);
+                    color: #505050;
+                }
+                &.active {
+                    position: relative;
+                    a {
+                        color: @mainColor;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        right: 0px;
+                        bottom: -1px;
+                        background-color:@mainColor;
+                    }
+                }
+            }
+        }
+
+        .more {
+            width: (40 / @vw);
+            height: 100%;
+            text-align: center;
+            line-height: (40 / @vw);
+
+            .iconfont {
+                font-size: (20 / @vw);
+                color: #ccc;
+            }
+        }
     }
 }

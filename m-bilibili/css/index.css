@@ -63,6 +63,45 @@ header .navbar .right .open-app {
   width: 19.2vw;
 }
 header .menu {
+  justify-content: space-between;
   height: 10.66666667vw;
-  background-color: yellow;
+  border-bottom: 1px solid #e8e8e8;
+}
+header .menu .tab {
+  justify-content: space-around;
+  flex: 1;
+  height: 100%;
+}
+header .menu .tab div {
+  height: 100%;
+  line-height: 10.66666667vw;
+}
+header .menu .tab div a {
+  font-size: 3.73333333vw;
+  color: #505050;
+}
+header .menu .tab div.active {
+  position: relative;
+}
+header .menu .tab div.active a {
+  color: #fb7299;
+}
+header .menu .tab div.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  right: 0px;
+  bottom: -1px;
+  background-color: #fb7299;
+}
+header .menu .more {
+  width: 10.66666667vw;
+  height: 100%;
+  text-align: center;
+  line-height: 10.66666667vw;
+}
+header .menu .more .iconfont {
+  font-size: 5.33333333vw;
+  color: #ccc;
 }
