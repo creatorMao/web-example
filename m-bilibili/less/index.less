@@ -1,1 +1,59 @@
 @import './base.less';
+@vw: 3.75vw;
+@mainColor: #fb7299;
+
+.flex-cross-center {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: (84 / @vw);
+
+    // background-color: red;
+    .navbar {
+        justify-content: space-between;
+        height: (44 / @vw);
+        padding: 0 (12 / @vw) 0 (18 / @vw);
+        color: @mainColor;
+
+        // background-color: green;
+        .logo {
+            .iconfont {
+                font-size: (28 / @vw);
+            }
+        }
+
+        .right {
+            a {
+                margin-left: (20 / @vw);
+            }
+
+            .search {
+                .iconfont {
+                    color: #ccc;
+                    font-size: (22 / @vw);
+                }
+            }
+
+            .user {
+                width: (24 / @vw);
+                border-radius: ((24 / @vw) / 2);
+                overflow: hidden;
+            }
+
+            .open-app {
+                width: (72 / @vw);
+            }
+        }
+    }
+
+    .menu {
+        height: (40 / @vw);
+        background-color: yellow;
+    }
+}

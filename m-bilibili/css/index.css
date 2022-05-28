@@ -27,3 +27,42 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.flex-cross-center {
+  display: flex;
+  align-items: center;
+}
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 22.4vw;
+}
+header .navbar {
+  justify-content: space-between;
+  height: 11.73333333vw;
+  padding: 0 3.2vw 0 4.8vw;
+  color: #fb7299;
+}
+header .navbar .logo .iconfont {
+  font-size: 7.46666667vw;
+}
+header .navbar .right a {
+  margin-left: 5.33333333vw;
+}
+header .navbar .right .search .iconfont {
+  color: #ccc;
+  font-size: 5.86666667vw;
+}
+header .navbar .right .user {
+  width: 6.4vw;
+  border-radius: 3.2vw;
+  overflow: hidden;
+}
+header .navbar .right .open-app {
+  width: 19.2vw;
+}
+header .menu {
+  height: 10.66666667vw;
+  background-color: yellow;
+}
