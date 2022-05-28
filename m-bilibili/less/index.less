@@ -6,13 +6,18 @@
     display: flex;
     align-items: center;
 }
+.flex-row{
+    display: flex;
+}
 
 header {
     position: fixed;
     top: 0px;
     left: 0px;
+    z-index: 100;
     width: 100vw;
     height: (84 / @vw);
+    background-color: white;
 
     // background-color: red;
     .navbar {
@@ -96,6 +101,62 @@ header {
                 font-size: (20 / @vw);
                 color: #ccc;
             }
+        }
+    }
+}
+
+.main{
+    margin-top:(84 / @vw);
+    .video-list{
+        padding: 0 5px;
+        flex-wrap: wrap;
+    }
+    .card-box{
+        width: 50%;
+        box-sizing: border-box;
+        padding: 8px 5px;
+        .card{
+            position: relative;
+            .count{
+                position: absolute;
+                width: 100%;
+                bottom: 0px;
+                padding: (5 / @vw);
+                box-sizing: border-box;
+                justify-content: space-between;
+                color: white;
+                font-size: (14 / @vw);
+                .iconfont{
+                    font-size: (14 / @vw);
+                }
+            }
+        }
+        p{
+            margin-top: (6/ @vw);
+            font-size: (12/ @vw);
+            color: #212121;
+        }
+    }
+}
+
+.button{
+    box-sizing: border-box;
+    position: fixed;
+    left: 0px;
+    bottom: 8vw;
+    z-index: 100;
+    width: 93.6vw;
+    margin: 0 3.3vw;
+    height: (37 / @vw);
+    line-height: (37 / @vw);
+    border-radius: ((37 / @vw)/2);
+    text-align: center;
+    background-color: @mainColor;
+    a{
+        color: white;
+        font-size: (14 / @vw);
+        .iconfont{
+            margin-right: (10 / @vw);
         }
     }
 }
