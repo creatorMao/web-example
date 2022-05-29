@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栅栏</title>
+    <link rel="stylesheet" href="../libs/bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <style>
+        .container div{
+            height: 50px;
+            background-color: red;
+        }
+
+        .container div:nth-child(2){
+            background-color: green;
+        }
+
+        .container div:nth-child(3){
+            background-color: yellow;
+        }
+
+        .container div:nth-child(4){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2>>1200 一行排4个</h2>
+    <h2> >992 < 1200 一行排2个 </h2>
+    <div class="container">
+        <div class="col-lg-3 col-md-6">1</div>
+        <div class="col-lg-3 col-md-6">2</div>
+        <div class="col-lg-3 col-md-6">3</div>
+        <div class="col-lg-3 col-md-6">4</div>
+    </div>
+</body>
+</html>
