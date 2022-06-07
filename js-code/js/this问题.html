@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(this); //window
+
+        var bb = 1;
+        console.log(window.bb);
+        console.log(this.bb);
+
+
+        let aa = 1;
+        console.log(window.aa);
+        console.log(this.aa);
+
+        console.log("----------------------------")
+
+        // var name='小绿';
+        // console.log(window.name);    //小绿
+        // function showMyName(){
+        //     let name='小狗';
+        //     console.log(name);      //小狗
+        //     console.log(this.name); //小绿
+        // }
+        // console.log(window.showMyName);  
+        // showMyName(); //window.showMyName(); 
+
+
+        console.log("----------------------------")
+
+        // let name='小绿';
+        // console.log(window.name);    //小绿
+        // let showMyName=function showMyName(){
+        //     let name='小狗';
+        //     console.log(name);      //小狗
+        //     console.log(this.name); //小绿
+        // }
+        // console.log(window.showMyName);  
+        // showMyName(); //window.showMyName(); 
+        // window.showMyName(); 
+
+        console.log("----------------------------")
+
+
+        // let name="小绿"
+
+        // let people={
+        //     name:'小狗',
+        //     showMyName:function(){
+        //         console.log(name)       //小绿
+        //         console.log(this)       //{name: '小狗', showMyName: ƒ}
+        //         console.log(this.name); //小狗
+        //     }
+        // }
+
+        // people.showMyName();
+
+
+        //  let people={
+        //     name:'小狗',
+        //     showMyName:function(){
+        //         console.log(this.name); 
+        //     }
+        // }
+
+        // people.showMyName();                   //小狗
+        // people.showMyName.call({name:'小猫'}); //小猫
+        // people.showMyName.call({name:'小毛'}); //小毛
+
+
+        var name = '小红'
+
+        let people = {
+            name: '小狗',
+            showMyName: () => {
+                console.log(this.name);      //小红
+            },
+            showAnotherName: function () {
+                return () => {
+                    console.log(this.name);  //小狗
+                }
+            }
+        }
+
+        people.showMyName();
+        people.showAnotherName()();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
