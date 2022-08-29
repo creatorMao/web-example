@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     function RequestData(url,successCallBack,failCallBack){
+        //模拟异步编程
+        setTimeout(()=>{
+          if(url==="www.baidu.com"){
+            successCallBack("baidu");
+          }
+          else{
+            failCallBack("url错误");
+          }
+        },2000)
+      }
+
+      RequestData("www.baidu.com",function(res){
+        console.log(`请求成功，${res}`);
+      },function(res){
+        console.log(`请求失败，${res}`);
+      })
+
+      function RequestData1(url,successCallBack,failCallBack){
+        const promise=new Promise((resolve,reject)=>{
+          //异步代码
+          setTimeout(()=>{
+            if(url==="www.baidu.com"){
+              resolve("baidu");
+            }
+            else{
+              reject("url错误");
+            }
+          },2000)
+        })
+        return promise
+      }
+
+      RequestData1("www.baidu.com")
+      .then(
+        (res)=>{
+	        console.log(`请求成功1，${res}`);
+        },
+        (res)=>{
+          console.log(`请求失败1，${res}`);
+        }
+      )
+  </script>
+</body>
+</html>

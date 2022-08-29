@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // const promise=new Promise((resolve,reject)=>{
+  //   resolve('成功啦');
+  // })
+
+  // promise.then((res)=>{
+  //   console.log("第一次");
+  // });
+
+  // promise.then((res)=>{
+  //   console.log("第二次");
+  // });
+
+  // promise.then((res)=>{
+  //   console.log("第三次");
+  // });
+
+
+  // const promise=new Promise((resolve,reject)=>{
+  //   resolve('成功啦');
+  // }).then((res)=>{
+  //   return {msg:"你好"}
+  //   // return new Promise((resolve,reject)=>{
+  //   //   resolve({msg:"你好"});
+  //   // })
+  // }).then((res)=>{
+  //   console.log(res);
+  // })
+
+  
+  // const promise=new Promise((resolve,reject)=>{
+  //   resolve('成功啦');
+  // }).then((res)=>{
+  //     // return new Promise((resolve)=>{
+  //     //   resolve(undefined);
+  //     // })
+  // }).then((res)=>{
+  //   console.log(res); //undefined
+  // })
+
+  const promise=new Promise((resolve,reject)=>{
+    //reject("1");
+    throw new Error("1")
+  }).then(undefined,(res)=>{
+    console.log(res);
+  })
+
+
+  promise.catch((res)=>{
+    console.log(res);
+  })
+
+
+  </script>
+</body>
+</html>
