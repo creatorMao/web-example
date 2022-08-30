@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let person = {
+    //   name: '毛',
+    //   hobby:'',
+    //   hobbyText:''
+    // }
+
+    // function defineProperty(obj, propName) {
+    //   let propValue = obj[propName]
+    //   Object.defineProperty(obj, propName, {
+    //     get: function () {
+    //       return propValue
+    //     },
+    //     set: function (newValue) {
+    //       obj["hobbyText"]=`我是爱${newValue}的小哥哥一枚呀~`
+    //       propValue = newValue
+    //     }
+    //   })
+    // }
+
+    // defineProperty(person,'hobby')
+    // person.hobby="唱跳、rap、篮球"
+    // console.log(person);
+
+    let arr = [1, 2, 3, 4, 5]
+
+    function defineProperty(obj) {
+      Object.keys(arr).forEach((key) => {
+        console.log(key);
+        let propValue = obj[key] //形成闭包
+        Object.defineProperty(obj, key, {
+          get: function () {
+            return propValue
+          },
+          set: function (newValue) {
+            console.log("触发set", newValue); propValue = newValue
+          }
+        })
+      })
+    }
+
+    defineProperty(arr)
+    arr[0] = 1 //触发set 1
+
+    arr.push("1"); //不触发
+
+
+  </script>
+</body>
+
+</html>
