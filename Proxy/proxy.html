@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const target={
+      name:'毛致武'
+    }
+
+    const person=new Proxy(target,{
+      get(target,propertyName){
+        console.log(`正在读取属性${propertyName}的值`);
+        return Reflect.get(target,propertyName)
+      },
+      set(target,propertyName,newValue){
+        console.log(`正在设置/修改属性${propertyName}的值，新值为${newValue}`);
+        Reflect.set(target,propertyName,newValue);
+      },
+      deleteProperty(target,propertyName){
+        console.log(`正在删除属性${propertyName}的`);
+        return Reflect.deleteProperty(target,propertyName);
+      }
+    })
+
+    // console.log(target.name="毛");//无法被拦截
+
+    console.log(person.name);
+    person.name="成"
+    person.sex="男"
+    delete person.sex
+
+    console.log(target,person);
+  </script>
+</body>
+</html>
