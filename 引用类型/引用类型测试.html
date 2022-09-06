@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const person={
+      name:'毛致武',
+      addressInfo:{
+        name:'杭州',
+        detail:'111'
+      }
+    }
+
+    function getPerson(){
+      return person
+    }
+
+    function getAddressInfo(){
+      return person.addressInfo
+    }
+
+    let person1=getPerson();
+    person1.name='test'
+
+    let address=getAddressInfo();
+    address.name='test11'
+
+    address.detail="1111111111111111111111111"
+
+    console.log(person);
+    console.log(person1);
+    console.log(person===person1);
+    console.log(address);
+  </script>
+</body>
+</html>
