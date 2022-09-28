@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #row1{
+      height:200px;
+      background-color: #e8e8e8;
+    }
+
+    #column1{
+      width:100px;
+      height:100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="row1">
+    某一行
+    <div id="column1">某一列</div>
+  </div>
+</body>
+<script>
+  const row1=document.getElementById('row1')
+  row1.addEventListener('click',()=>{
+    console.log('点击了某一行');
+  })
+
+  // const row1=document.getElementById('row1')
+  // row1.addEventListener('click',()=>{
+  //   console.log('点击了某一行');
+  // },true)
+
+  const column1=document.getElementById('column1')
+  column1.addEventListener('click',(event)=>{
+    event.stopPropagation()
+    console.log('点击了某一列');
+  })
+</script>
+</html>
