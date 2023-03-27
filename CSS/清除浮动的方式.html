@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .item{
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 100px;
+      background-color:red;
+    }
+    .father{
+      border: 1px solid green;
+      margin: 10px;
+    }
+    .clear-fix::after{
+      content: '';
+      display: block;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      clear: both;
+    }
+
+    .father2{
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="father clear-fix">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+
+  <div class="father father2">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</body>
+</html>
