@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 500px;
+      height: 500px;
+      border: 1px solid red;
+    }
+    .item{
+      width: 100px;
+      height: 100px;
+      line-height:100px;
+      text-align: center;
+      border: 1px solid green;
+      flex: auto;
+    }
+
+    .item-1{
+      width: 200px;
+    }
+
+    .item-2{
+      flex-basis:0
+    }
+
+      /* 
+       1.计算剩余宽度：    500px-200-100*1=200
+       2.计算有多少份元素： 3分：        
+       3.basis的66，其余的每一份需要变大 66px 
+       /* 266+66+166=500 */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item">3</div>
+  </div>
+</body>
+
+</html>
