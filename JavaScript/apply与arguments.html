@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+  const fun1=function(age,hobby){
+    console.log(this);
+    console.log(age,hobby);
+  }
+  const fun2=function(func){
+    func.apply({name:'老大'},arguments[1])
+  }
+  fun1(18,'唱')
+  fun2(fun1,['19','挑'])
+</script>
+</html>
