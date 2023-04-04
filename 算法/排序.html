@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+// const arr1 = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'D1', 'D2']
+// const arr2 = ['B', 'A', 'D', 'C']
+
+// let map = new Map()
+// arr2.map((item) => {
+//   map.set(item, item)
+// })
+// console.log(map);
+
+// let res = []
+// for (let index = 0; index < arr1.length; index++) {
+//   const current = arr1[index]
+//   const currentKey = current[0];
+//   const nextKey = arr1[index + 1]?.[0];
+
+//   res.push(current);
+//   if (currentKey !== nextKey) {
+//     res.push(map.get(currentKey));
+//   }
+// }
+
+// console.log(res);
+
+const arr1 = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'D1', 'D2']
+const arr2 = ['B', 'A', 'D', 'C']
+
+let res = []
+for (let index = 0; index < arr1.length; index++) {
+  const current = arr1[index]
+  const currentKey = current[0];
+  const nextKey = arr1[index + 1]?.[0];
+
+  res.push(current);
+  if (currentKey !== nextKey) {
+    
+    arr2.forEach((item)=>{
+      if(item===currentKey){
+        res.push(item);
+      }
+    })
+  }
+}
+console.log(res);
+
+</script>
+
+</html>
