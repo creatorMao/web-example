@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .font-size-12{
+      font-size: 12px;
+    }
+    .font-size-11{
+      font-size: 11px;
+    }
+    .font-size-10-zoom{
+      font-size: 20px;
+      zoom: 0.5;
+    }
+    .font-size-10-scale{
+      font-size: 12px;
+      transform: scale(0.83333); 
+      transform-origin:0 0;
+      /* 10/12 */
+    }
+  </style>
+</head>
+<body>
+  <p>默认16px</p>
+  <p class="font-size-12">最小12px</p>
+  <p class="font-size-11">即使设置了11px，也是按照最小12px显示</p>
+  <p class="font-size-10-zoom">通过zoom来设置10px</p>
+  <p class="font-size-10-scale">通过scale来设置10px</p>
+</body>
+</html>
