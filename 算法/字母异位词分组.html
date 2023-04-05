@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat']
+
+  //1. 先将每个单词，按照各自的字母顺序重新排序，得到一个全新数组
+  //2. 再循环新数组，如果当前项，map中没有，则插入，key为新数组的项，value为当前索引值对应老数组的值
+  //3. 将map转成二维数组
+  const groupKeyWords1 = (strs) => {
+    const strsWithSort = []
+    strs.forEach((keyword) => {
+      strsWithSort.push(keyword.split("").sort().join(""));
+    })
+    console.log('原始数据：', strs);
+    console.log('重新排序后：', strsWithSort);
+
+    let map = new Map()
+    strsWithSort.forEach((item, index) => {
+      let value = strs[index]
+      if (!map.has(item)) {
+        map.set(item, [value])
+      }
+      else {
+        let old = map.get(item)
+        map.set(item, [...old, value])
+      }
+    })
+    
+    return Array.from(map.values())
+  }
+
+  const groupKeyWords2=(strs)=>{
+    const map=new Map()
+    strs.forEach((keyword)=>{
+      let groupKey=Array.from(keyword).sort().join("")
+      let groupValue= map.get(groupKey)?[...map.get(groupKey),keyword]:[keyword]
+      map.set(groupKey,groupValue)
+    })
+
+    console.log(map.values());
+
+    return Array.from() 
+  }
+
+  console.log(groupKeyWords1(strs))
+  console.log(groupKeyWords2(strs))
+
+</script>
+
+</html>
