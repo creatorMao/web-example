@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>获取对象上key的方式</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const obj={
+    name:'1',
+    age:16,
+    test:function(){
+      
+        }
+  }
+
+  obj.__proto__["sex"]='111'
+  console.log(obj);
+  console.log(Object.keys(obj));
+  for(let key in obj){
+    console.log(key);
+  }
+</script>
+</html>
