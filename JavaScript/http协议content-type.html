@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+</body>
+<script>
+  const useForm = () => {
+    axios({
+      'url': 'http://118.25.46.230:6001/news/ADD',
+      method: 'post',
+      headers: {
+        "content-type": 'application/x-www-form-urlencoded'
+      },
+      data:'groupId=1&content=1'
+    })
+  }
+
+  const useJson = () => {
+    axios({
+      url:'http://118.25.46.230:6001/news/ADD',
+      method: 'post',
+      headers: {
+        "Content-Type": 'application/json'
+      },
+      data:{
+        groupId:'1',
+        content:'1'
+      }
+    })
+  }
+
+  useForm();
+  useJson();
+</script>
+
+</html>
