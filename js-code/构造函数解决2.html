@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CreatePerson(name){
+            this.name=name;
+        }
+
+        CreatePerson.prototype.show=function(){
+            console.log("233");
+        }
+
+        let person1=new CreatePerson("毛致武");
+        let person2=new CreatePerson("毛文清");
+
+        person1.__proto__.show();
+        person2.__proto__.show();
+        console.log(person1.__proto__.show===person2.__proto__.show);
+        console.log(person1.__proto__.show===CreatePerson.prototype.show);
+</script>
+</head>
+<body>
+    
+</body>
+</html>

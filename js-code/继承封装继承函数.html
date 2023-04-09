@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let wjl={
+            house:{
+                address:'杭州西湖边语雀办公楼',
+                price:'11111111111111'
+            },
+            car:{
+                brand:'凯迪拉克',
+                price:'22222222'
+            },
+            smallGoal:'一个亿'
+        }
+
+
+        function Son(name){
+            this.name=name;
+        }
+
+        Son.prototype.eat=function(){
+            console.log('我爱喝奶茶！');
+        }
+
+        function extend(construct,father){
+            for (const key in father) {
+                construct.prototype[key]=father[key]
+            }
+        }
+        extend(Son,wjl)
+
+        let wsc=new Son('王思聪1');
+        let wscBrother=new Son('王思聪的弟弟');
+
+        console.log(wsc,wscBrother);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

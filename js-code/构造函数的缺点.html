@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CreatePerson(name) {
+            this.name = name;
+            this.eat = () => {
+                console.log('我是人，我能吃饭');
+            }
+        }
+
+        let person1 = new CreatePerson('毛致武');
+        let person2 = new CreatePerson('毛文清');
+
+        console.log(person1.eat===person2.eat); //false
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
